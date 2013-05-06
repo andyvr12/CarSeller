@@ -1,0 +1,37 @@
+<h1>Lista de Vehiculos</h1>
+
+<table class="table table-hover table-striped">
+  <thead>
+  <tr>
+
+    <th>Nombre: </th>
+    <th>Marca: </th>
+    <th>Tipo de Vehiculo:</th>
+   
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+
+<tbody>
+
+<% @vehicles.each do |vehicle| %>
+  <tr class="<%= cycle :success, :error, :warning, :info  %>">
+    <td><%= vehicle.name %></td>
+    <td><%= vehicle.brand.name %></td>
+    
+    <td><%= vehicle.vehicle_type.name %></td>
+
+    <td><%= link_to 'Ver', vehicle %></td>
+    <td><%= link_to 'Editar', edit_vehicle_path(vehicle) %></td>
+    <td><%= link_to 'Eliminar', vehicle, method: :delete, data: { confirm: 'Usted esta seguro?' } %></td>
+  </tr>
+<% end %>
+
+</tbody>
+</table>
+
+<br />
+
+<%= link_to icon('plus')+ 'Crear Vehiculo', new_vehicle_path, class: 'btn btn-success' %>
