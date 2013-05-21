@@ -1,27 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<p class="lead" >
+  <b><u>Nombre:</u></b>
   <%= @customer.name %>
 </p>
 
-<p>
-  <b>Email:</b>
+<p class="lead">
+  <b><u>Email:</u></b>
   <%= @customer.email %>
 </p>
 
-<p>
-  <b>Phone:</b>
+<p class="lead">
+  <b><u>Tel&eacute;fono:</u></b>
   <%= @customer.phone %>
 </p>
 
-<p>
+<p class="lead">
 
   
-  <b>Usuario <%=  @customer.vip ? 'vip' : 'comun' %></b>
+  <b><u>Usuario</u> <%=  @customer.vip ? 'vip' : 'comun' %></b>
  
 </p>
 
 
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to strongify(icon('edit')+'Editar'), edit_customer_path(@customer),class:'btn btn-warning' %> |
+<%= link_to strongify(icon('chevron-left')+'Volver'), customers_path, class:'btn' %>

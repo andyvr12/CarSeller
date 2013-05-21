@@ -1,27 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p><%= title(@vehicle) %> </p>
+<p class="lead"><u><%= title(@vehicle) %> </u></p>
 
-<p>
-  <%= strongify('Nombre:')  %>
+<p class="lead"><u>
+  <%= strongify('Nombre:')  %></u>
   <%= @vehicle.name %>
 </p>
 
-<p>
-    <%= strongify('Marca:')  %>
+<p class="lead">
+    <u><%=  strongify('Marca:')  %></u>
   <%= @vehicle.brand.name %>
 </p>
 
-<p>
-    <%= strongify('Tipo:')  %>
+<p class="lead">
+   <u> <%= strongify('Tipo:')  %></u>
   <%= @vehicle.vehicle_type.name %>
 </p>
 
-<p>
-    <%=strongify('Dueño:')  %>
+<p class="lead">
+   <u> <%=strongify('Dueño:')  %></u>
   <%= @vehicle.customer.name %>
 </p>
 
+<p class="lead">
+   <u> <%=strongify('Precio:')  %></u>
+  <%= @vehicle.price %>
+</p>
 
-<%= link_to 'Edit', edit_vehicle_path(@vehicle) %> |
-<%= link_to 'Back', vehicles_path %>
+<p class="lead">
+   <u> <%=strongify('Cantidad km:')  %></u>
+  <%= @vehicle.amount_km %>
+</p>
+
+<p class="lead">
+    <u><%=strongify('Tipo de Combustible:')  %></u>
+  <%= @vehicle.fuel_Type %>
+</p>
+
+<p class="lead">
+   <u> <%=strongify('Año Modelo:')  %></u>
+  <%= @vehicle.year %>
+</p>
+
+<%= link_to strongify(icon('edit')+'Editar'), edit_vehicle_path(@vehicle),class:'btn btn-warning' %> |
+<%= link_to strongify(icon('chevron-left')+'Volver'), vehicles_path, class:'btn' %>

@@ -1,6 +1,6 @@
-<h1>Editing brand</h1>
+<h1 class="text-warning"><u><i>Editar Marca</i></u></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @brand %> |
-<%= link_to 'Back', brands_path %>
+<%= link_to strongify(icon('eye-open')+'Ver'), @brand, class:'btn btn-info'  %> |
+<%= link_to strongify(icon('chevron-left')+'Volver'), brands_path, class:'btn ' %>

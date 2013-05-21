@@ -32,6 +32,31 @@
   
     <%= f.collection_select :customer_id, Customer.all, :id, :name %>
   </div>
+
+  <div class="field">
+    <%= f.label :price %><br />
+  
+    <%= f.text_field :price %>
+  </div>
+
+<div class="field">
+    <%= f.label :amount_km %><br />
+  
+    <%= f.text_field :amount_km %>
+  </div>
+
+<div class="field">
+    <%= f.label :fuel_Type %><br />
+  
+    <%= f.text_field :fuel_Type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :year%><br />
+  
+    <%= f.text_field :year %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

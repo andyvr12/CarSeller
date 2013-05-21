@@ -1,6 +1,6 @@
-<h1>Editing customer</h1>
+<h1 class="text-warning"><u><i>Editar Cliente</i></u></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @customer %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to strongify(icon('eye-open')+'Ver'), @customer, class:'btn btn-info'%> |
+<%= link_to strongify(icon('chevron-left')+'Volver'), customers_path, class:'btn' %>

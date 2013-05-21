@@ -3,4 +3,5 @@ class Customer < ActiveRecord::Base
 
   validates :name, :email, :presence => {:message => 'PONE ALGO!!'}
   validates :phone, :numericality =>true, :allow_blank => true # si dejo el campo en blanco no me tire error 
+ 
 end

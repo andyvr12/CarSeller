@@ -1,6 +1,6 @@
-<h1>Editing vehicle</h1>
+<h1 class="text-warning"><u><i>Editar Vehiculo</i></u></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @vehicle %> |
-<%= link_to 'Back', vehicles_path %>
+<%= link_to strongify(icon('eye-open')+'Ver'), @vehicle, class:'btn btn-info'  %> |
+<%= link_to strongify(icon('chevron-left')+'Volver'), vehicles_path, class:'btn ' %>

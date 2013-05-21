@@ -1,11 +1,11 @@
-<h1>Listing customers</h1>
+<h1 class="text-success" ><i><u>Listado de Clientes</u></i></h1>
 
-<table>
+<table class="table table-hover">
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
     <th>Email</th>
-    <th>Phone</th>
-    <th></th>
+    <th>Tel&eacute;fono</th>
+    <th> Vip</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,13 +15,14 @@
     <td><%= customer.name %></td>
     <td><%= customer.email %></td>
     <td><%= customer.phone %></td>
-    <td><%= link_to 'Show', customer %></td>
-    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-    <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= customer.vip ? 'vip' : 'comun' %></td>
+    <td><%= link_to icon('eye-open')+'Ver', customer, class:'btn btn-info' %></td>
+    <td><%= link_to icon('edit')+'Editar', edit_customer_path(customer), class:'btn btn-warning' %></td>
+    <td><%= link_to icon('remove')+'Eliminar', customer, method: :delete, data: { confirm: 'Usted esta seguro de Eliminar dicho Cliente?' }, class:'btn btn-danger'  %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Customer', new_customer_path %>
+<%= link_to strongify(icon('plus')+ 'Agregar Cliente'), new_customer_path,  class: 'btn btn-success' %>

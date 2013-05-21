@@ -11,3 +11,51 @@
  *= require_self
  *= require_tree .
  */
+
+ body
+{
+background-image:url('bluejpg');
+background-repeat:repeat-all;
+}
+
+.title
+{
+  color: #294C89;
+}
+
+.hero 
+{
+  padding: 40px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+ 
+  background-color: #848484;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.izq
+{
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 535px;
+  background-color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.de
+{
+
+float: right;
+  padding: 8px;
+  margin-top: -50px;
+  margin-bottom: -70px;
+ margin-right: 200px;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

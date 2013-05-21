@@ -9,17 +9,35 @@
 <body>
 
 <div class="container">
-      <div id="header">
-       <h1>Concesionaria</h1>
-     </div>
+      <div id="header"  class="hero" >
+
+         <div class="izq">
+            <h1 align = "left"> <i class="title">Concesionaria</i></h1>
+   
+        </div>
+
+           <div class="de" align="right" >
+             <div class="navbar">
+                <div class="navbar-inner">
+                  <ul class="nav">
+                    <li class="active"><a href="#"><%= strongify('Nuevos')%></a></li>
+                    <li ><a href="#"><%= strongify('Usados')%></a></li>
+                    <li ><a href="#"><%= strongify('Contacto')%></a></li>
+                    
+                  </ul>
+                </div>
+              </div>    
+           </div>
+    
+        </div>
      <div class="row">
-     <div id="menu" class="span2">
-           <ul>
-            <li><%=  link_to  strongify('Inicio'), root_url  %></li>
-            <li><%=  link_to 'Marcas', brands_path  %></li>
-            <li><%=  link_to 'Clientes', customers_path  %></li>
-            <li><%=  link_to 'Tipo de Vehiculo', vehicle_types_url  %></li>
-            <li><%=  link_to 'Vehiculo', vehicles_path  %></li>
+     <div id="menu" class="span2" >
+           <ul class="nav nav-pills nav-stacked" >
+            <li><%=  link_to  strongify( icon('home')+'Inicio'), root_url  %></li>
+            <li><%=  link_to strongify(icon('star')+'Marcas'), brands_path  %></li>
+            <li><%=  link_to strongify(icon('user')+'Clientes'), customers_path  %></li>
+            <li><%=  link_to strongify(icon('hand-up')+'Tipo de Vehiculo'), vehicle_types_url  %></li>
+            <li><%=  link_to strongify(icon('plane')+'Vehiculo'), vehicles_path  %></li>
 
           </ul>
      </div>
@@ -28,9 +46,11 @@
 
        </div>
      </div>
+
+     
      <div id="footer">
 
-      &copy; <%= Time.now.year  %> Concesionaria
+     <p class="text-center" ><b> &copy; <%= Time.now.year  %> Concesionaria </b></p>
       </div>
 </div>
 </body>

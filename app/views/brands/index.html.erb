@@ -1,23 +1,46 @@
-<h1>Listing brands</h1>
+<h1 class="text-success" ><i><u>Listado de Marcas</u></i></h1>
 
-<table>
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+     <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item"><%= image_tag('fife.jpg') %></div>
+    <div class="item"><%= image_tag('audi.jpg') %></div>
+    <div class="item"><%= image_tag('bmw.jpg') %></div>
+    <div class="item"><%= image_tag('vv.jpg') %></div>
+    <div class="item"><%= image_tag('lala.jpg') %></div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+
+
+<table class="table table-bordered">
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
 
     <th></th>
     <th></th>
   </tr>
 
 <% @brands.each do |brand| %>
-  <tr>
-    <td><%= link_to brand.name, brand %> (<%= brand.total_vehicles  %>)</td>
+  <tr class="<%= cycle  :warning %>">
+    <td><%= link_to strongify(brand.name), brand %> (<%= brand.total_vehicles  %>)</td>
     
-    <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
-    <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to icon('edit')+'Editar', edit_brand_path(brand), class:'btn btn-warning' %></td>
+    <td><%= link_to icon('remove')+'Eliminar', brand, method: :delete, data: { confirm: 'Usted esta seguro de eliminar dicha Marca?' }, class:'btn btn-danger'  %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Brand', new_brand_path %>
+<%= link_to strongify(icon('plus')+ 'Agregar Marca'), new_brand_path, class: 'btn btn-success' %>

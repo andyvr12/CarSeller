@@ -1,23 +1,33 @@
-<h1>Listing vehicle_types</h1>
+<h1 class="text-success"><u><i>Listado Tipos de Vehiculos</i></u></h1>
 
-<table>
+<table class="table table-bordered">
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @vehicle_types.each do |vehicle_type| %>
-  <tr>
+  <tr class="<%= cycle  :warning, :info  %>">
     <td><%= vehicle_type.name %></td>
-    <td><%= link_to 'Show', vehicle_type %></td>
-    <td><%= link_to 'Edit', edit_vehicle_type_path(vehicle_type) %></td>
-    <td><%= link_to 'Destroy', vehicle_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+    <td><%=  %></td>
+ 
+    <td><%= link_to icon('edit')+'Editar', edit_vehicle_type_path(vehicle_type), class:'btn btn-warning' %></td>
+    <td><%= link_to icon('remove')+'Eliminar', vehicle_type, method: :delete, data: { confirm: 'Usted esta seguro de Eliminar dicho tipo de Vehiculo?' }, class:'btn btn-danger' %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Vehicle type', new_vehicle_type_path %>
+<%= link_to strongify(icon('plus')+'Crear Tipo de Vehiculo'), new_vehicle_type_path, class: 'btn btn-success'%>

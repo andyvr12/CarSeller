@@ -1,5 +1,6 @@
-<h1>Nuevo Vehiculo</h1>
+<h1 class="text-success"><u><i>Agregar Vehiculo</i></u></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', vehicles_path %>
+<%= link_to strongify(icon('chevron-left')+'Volver'), vehicles_path, class:'btn' %>
+

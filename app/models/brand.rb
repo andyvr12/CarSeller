@@ -4,6 +4,8 @@ class Brand < ActiveRecord::Base
   attr_accessible :name
 
 
+validates :name, :presence => true, :uniqueness => true
+
   def total_vehicles
     vehicles.size #=> vehicles.count  
   end
