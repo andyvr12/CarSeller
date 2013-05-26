@@ -38,8 +38,19 @@
             <li><%=  link_to strongify(icon('user')+'Clientes'), customers_path  %></li>
             <li><%=  link_to strongify(icon('hand-up')+'Tipo de Vehiculo'), vehicle_types_url  %></li>
             <li><%=  link_to strongify(icon('plane')+'Vehiculo'), vehicles_path  %></li>
+            <li><%=  link_to strongify(icon('font')+'Accesorios'), accesorios_path  %></li>
 
+          
           </ul>
+
+          <br><br>
+
+          <ul>
+             <li><b><u>Dolar Compra Oficial</u></b>: <%= dolar_compra_oficial  %></li>
+             <li><b><u>Dolar Venta Oficial</u></b>: <%= dolar_venta_oficial  %></li>
+             <li><b><u>Blue Compra Oficial</u></b>: <%= blue_compra_oficial  %></li>
+             <li><b><u>Blue Venta Oficial</u></b>: <%= blue_venta_oficial  %></li>
+           </ul> 
      </div>
       <div id="content" class="span10" >
       <%= yield %>-  

@@ -1,0 +1,51 @@
+<div id="myCarousel" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="item"><%= image_tag('vento.jpg') %></div>
+    <div class="active item"><%= image_tag('au.jpg') %></div>
+    <div class="item"><%= image_tag('po.jpg') %></div>
+    <div class="item"><%= image_tag('fi.jpg') %></div>
+    
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+<br>
+
+<div class="page-header">
+  <h4 align="center">Los Mas Vendidos del Momento <small>(Volkswagen vs Lamborghini)</small></h4>
+</div>
+
+<br>
+
+<ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <%= image_tag('gol.jpg') %>
+      <h5> Volkswagen Gol Trend</h5>
+      <p>Incorpora una nueva caja manual, de 5 velocidades, producida en el Centro Industrial Volkswagen de Córdoba, Argentina- y un nuevo motor de 1,6 litros.</p>
+       <p align="center" class='btn btn-success'>Info...</p>
+    </div>
+  </li>
+
+
+  <li class="span4">
+    <div class="thumbnail">
+      <%= image_tag('murci.jpg') %>>
+      <h5> Lamborghini Murciélago</h5>
+      <p>Sistema de suspensión delantera y la cola de doble brazo independiente, anti-rollbar, anti-dive, anti-squat,  unidad de control electrónico del motor, multipunto, secuencial cronometrado, unidad por cable.</p>
+      <p align="center" class='btn btn-success'>Info...</p>
+    </div>
+  </li>
+  
+</ul>
+
+  
+  

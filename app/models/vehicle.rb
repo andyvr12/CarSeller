@@ -11,4 +11,13 @@ class Vehicle < ActiveRecord::Base
   def full_name
     "#{brand.name} #{name} (#{vehicle_type.name})"
   end
+
+
+ def amount_in_pesos
+
+  d = Dollar.find(:first, :params =>{:dollar_type => 1})
+  ((price || 0)* d.buyer).to_s
+  
+ end
+
 end

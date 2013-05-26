@@ -22,4 +22,31 @@ module ApplicationHelper
     
   end
 
+  def dolar_compra_oficial
+
+    Dollar.find(:first, :params =>{:dollar_type => 1}).buyer
+   end
+
+   def dolar_venta_oficial
+
+    Dollar.find(:first, :params =>{:dollar_type => 1}).seller
+
+   end
+
+
+    def blue_compra_oficial
+
+    Dollar.find(:first, :params =>{:dollar_type => 2}).buyer
+
+   end
+
+   def blue_venta_oficial
+
+    Dollar.find(:first, :params =>{:dollar_type => 2}).seller
+
+   end
+
+
+   
+
 end

@@ -10,7 +10,9 @@ CarSeller::Application.routes.draw do
 
   resources :brands
 
- 
+ resources :accesorios
+
+
 
 
   # The priority is based upon order of creation:

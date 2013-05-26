@@ -1,0 +1,28 @@
+<h1 class="text-success" ><i><u>Listado de Accesorios</u></i></h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Nombre</th>
+    <th>Precio</th>
+    <th>Descripción</th>
+    <th> </th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @accesorios.each do |a| %>
+  <tr class="<%= cycle  :warning  %>">
+    <td><%= a.name %></td>
+    <td><%= a.price %></td>
+    <td><%= a.description %></td>
+    
+
+    <td><%= link_to 'Comprar', class:'btn btn-sucess' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to strongify(icon('chevron-left')+'Volver'), accesorios_path , class:'btn' %>
+
