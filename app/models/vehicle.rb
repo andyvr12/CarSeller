@@ -8,6 +8,9 @@ class Vehicle < ActiveRecord::Base
  validates :amount_km, :allow_blank => true, :numericality =>{:only_integer => true, :greater_than => 0} 
  validates :price, :presence=>true, :numericality =>{:greater_than => 0} #numero positivo entero
  validates :year, :numericality =>{:only_integer => true}
+  
+  dollarizeme :price
+
   def full_name
     "#{brand.name} #{name} (#{vehicle_type.name})"
   end

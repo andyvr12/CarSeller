@@ -11,6 +11,10 @@
     <th>Tipo de Vehiculo:</th>
     <th>Precio $</th>
     <th>Precio U$D</th>
+    <th>Blue</th>
+    <th>Gold</th>
+    <th>Colonia</th>
+    <th>Miami</th>
     <th>Cantidad KM</th>
     <th>Tipo Combustible</th>
     <th>Año Modelo</th>
@@ -26,7 +30,11 @@
     <td><%= vehicle.brand.name %></td>    
     <td><%= vehicle.vehicle_type.name %></td>
     <td><%= vehicle.price %></td>
-    <td><%= vehicle.amount_in_pesos %></td>
+    <td><%= vehicle.price_oficial %></td>
+    <td><%= vehicle.price_blue %></td>
+    <td><%= vehicle.price_gold %></td>
+    <td><%= vehicle.price_colonia %></td>
+    <td><%= vehicle.price_miami %></td>
     <td><%= vehicle.amount_km %></td>
     <td><%= vehicle.fuel_Type %></td>
     <td><%= vehicle.year %></td>
